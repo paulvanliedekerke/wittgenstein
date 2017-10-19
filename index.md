@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width,initial-scale=1.0">
     <title>Tate Johnson</title>
-    <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico">
+    
     <style type="text/css">
       html {
         background: #222222;
