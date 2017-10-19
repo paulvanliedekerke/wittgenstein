@@ -1,134 +1,91 @@
 ---
-layout: default
 ---
-<style type="text/css">
-div.posts div.end {
-  padding-top:40px;
-}
-h3 {
-  margin:0;
-  display:inline-block;
-}
-.content {
-  display: flex;
-}
-a[href].post-excerpt {
-  display: block;
-  color: inherit;
-  background: none;
-  text-shadow: none;
-  padding-bottom:1px;
-  margin-bottom:15px;
-  /*border-bottom: 8px solid #ddd;*/
-}
-a[href].post-excerpt, a[href].post-excerpt a[href] {
-  background: none;
-  text-shadow: none;
-}
-  a[href].post-excerpt:hover {
-    /*color: white; background-color:#444;*/
-    color:black; /*background-color:#BCEBC8;*/
-    /*text-decoration:none;*/
-    /*padding:0  20px 1px  20px;
-    margin: 0 -20px  15px -20px;*/
-  }
-    a[href].post-excerpt:hover h3 {
-      background-color:black; color: white;
-    }
-  a[href].post-excerpt.photo {
-    height:300px;
-    position:relative;
-    background:black;
-    margin-bottom:32px;
-  }
-    a[href].post-excerpt.photo h3 {
-      font-family: 'Roboto Condensed', helvetica, sans-serif;
-      padding:10px 40px;
-      font-size: 200%;
-      font-weight: 400;
-      color: white;
-      /*background:rgba(255,200,0,0.1);*/
-      -webkit-text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      -moz-text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      position: absolute;
-      left:0; right:0; bottom:0;
-      z-index:2;
-      /*font-family:inherit;*/
-      text-transform: none;
-      /*font-weight:400;*/
-      line-height:1.1;
-      padding-bottom:1em;
-    }
-    a[href].post-excerpt.photo div.c {
-      padding:0;
-      background: transparent no-repeat center center scroll;
-      position: absolute;
-      left:0; top:0; right:0; bottom:0;
-    }
-    a[href].post-excerpt.photo div.c div.image {
-      position: absolute;
-      left:0; top:0; right:0; bottom:0;
-      z-index:1;
-      background-position: center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-    a[href].post-excerpt.photo:hover div.c {
-      opacity: 1;
-    }
-    a[href].post-excerpt.photo:hover div.c div.image {
-      opacity:0.8;
-    }
-a[href].post-excerpt:hover .body {
-  color: inherit;
-}
-.body {
-  color: #555;
-}
-  h3.text {
-    font-size: 18px;
-  }
-  .body > p:first-child {
-    margin-top:8px;
-  }
-info {
-  display: inline;
-  color: #ddd;
-  white-space: nowrap;
-}
-</style>
-<div class="content">
-  <div class="posts">
-    {% for post in site.posts limit:50 %}{% if post.archived %}{% else %}<a
-    href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}"
-    class="post-excerpt{% if post.photo_url %} photo{% endif %}">
-      <div class="c">
-      {% if post.photo_url %}
-        <h3>{{ post.title }}</h3>
-        <div class="image" style="background-image:url('{{ post.photo_url }}')"></div>
-      {% else %}
-        <h3 class="text">{{ post.title }}</h3>
-        <div class="body">
-          <p>{% if post.description %}
-          {{ post.description | markdownify | strip_html }}
-          {% else %}
-          {{ post.excerpt | strip_html }}
-          {% endif %}
-          <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
-            {{ post.date | date: "%b %Y" }}
-          </info>
-          </p>
-        </div>
-      {% endif %}<!-- post.photo_url -->
-
-      </div>
-    </a>{% endif %}<!-- post.archived -->{% endfor %}
-    <div class="breaker"></div>
-    <div class="end">
-      <a href="/archive/">Archived articles...</a>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1.0">
+    <title>Tate Johnson</title>
+    <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico">
+    <style type="text/css">
+      html {
+        background: #222222;
+        color: #ffffff;
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      body {
+        margin: 0 5%;
+      }
+      @media only screen and (min-width: 481px) {
+        body {
+          margin: 75px auto;
+          width: 500px;
+        }
+      }
+      h1 {
+        background: url("{{ site.baseurl }}/lime.png") top left;
+        width: 202px;
+        height: 202px;
+        margin: 0 auto 37px auto;
+        display: block
+      }
+      h1:hover {
+        background-position: bottom left;
+      }
+      h1 > span {
+        display: none;
+      }
+      a {
+        color: #ebffb4;
+        text-decoration: underline;
+      }
+      a:hover,
+      a:focus,
+      a:active {
+        color: #222222;
+        background: #ebffb4;
+        text-decoration: none;
+      }
+      p,
+      ul,
+      .hr{
+        margin: 0;
+        margin-bottom: 37px;
+      }
+      ul {
+        padding: 0;
+      }
+      ul > li {
+        margin-left: 20px;
+      }
+      .hr {
+        background: transparent;
+        border-bottom: 1px solid #444444;
+        border-top: 1px solid #111111;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span>Tate Johnson</span></h1>
+    <p>Hi, I'm the CTO at <a href="https://www.fivegoodfriends.com.au">Five Good Friends</a>. I practice sustainably delivering polished software. Full-stack web and iOS development are my specialities. Some of my own software includes:
+    <ul>
+      <li><a href="https://antennamate.com">Antenna Mate</a>, an iOS app that instantly aligns any TV antenna.</li>
+      <li><a href="https://itunes.apple.com/us/app/500-rules/id1246165857?ls=1&mt=8">500 Rules</a>, an iOS app for effortlessly scoring games of 500. There's also a website with the <a href="https://500rules.com">rules</a> and a <a href="https://500rules.com/score-card/">score card</a>.</li>
+      <li><a href="https://github.com/tatey/Lighting">Lighting</a>, A macOS today extension for toggling LIFX lights on and off from the Notification Center.</li>
+      <li><a href="https://github.com/tatey">Various open source projects and contributions</a> on GitHub.</li>
+    </ul>
+    <p>Previously I lead iOS development at <a href="https://lifx.com">LIFX</a>, built the foundations of the <a href="https://cloud.lifx.com">LIFX Cloud</a>, and built the LIFX <a href="https://www.lifx.com.au/products/nest">Nest integration</a>. Earlier I was an original key engineer at <a href="https://www.everydayhero.com">Everyday Hero</a> when the company was acquired by <a href="https://www.blackbaud.com">Blackbaud</a>. I hold a Bachelor of Information Technology from <a href="https://www.griffith.edu.au">Griffith University</a>.</p>
+    <p>You can reach me at <a href="mailto:tate@tatey.com">tate@tatey.com</a> or <a href="http://twitter.com/tatejohnson/">@tatejohnson</a> on Twitter.</p>
+    <div class="hr"></div>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% include analytics.html %}
+  </body>
+</html>
