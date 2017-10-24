@@ -39,10 +39,10 @@
 <h2>Modeling and simulation of tissue regeneration using high resolution cell models.</h2>
 
 
-The goal is to get insight in the mechanical stress levels experienced by the hepatocytes during liver <b>tissue regeneration</b>, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [2]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and should become a new standard in agent-based tissue simulations.
+The goal is to get insight in the mechanical stress levels experienced by the hepatocytes during liver <b> tissue regeneration </b>, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 1, 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [refs]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and should become a new standard in agent-based tissue simulations.
 
 <figure>	      
-<img src="pics/lobule_final_DCM.jpg" alt="" width="420">      
+<img src="pics/lobule_final_DCM.jpg" alt="" width="430">      
 <figcaption> <I>Fig.1: High resolution cell model used in a simulation of hepatocyte regeneration in a liver lobule. The cells grow through the network of blood vessels (depicted in gray) from the portal vein area towards the central vein </I> </figcaption>	
 </figure>	      
 	      
@@ -65,40 +65,37 @@ This phenomenon is reminiscent to tumor cells experiencing the influence of the 
 The influence of mechanical feedback loop between cells and Extra-Cellular Matrix (ECM) is poorly understood.  In collaboration with Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells and explicit representation of ECM. The cells have anchoring points (filopodia) that are connected to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [3].
 	      
 	      
-<p></p>	     	      
-
+<p></p>	 
+<p> </p>	 
 <p></p>
+	      
 <h1>Past  <small> (before 2013) </small>  </h1> 
 	      
 <h2>Development of high resolution ”Deformable Cell Model“: modeling of arbitrary shaped cells with high
 detail</h2>
-	     
-
-	     
-
+	     	   
 The majority of agent based models in the past were build on the
 assumption of a rigid shaped cells (so-called center based models:
 e.g. spheres, ellipsoids). In a some problems, such simplifications
 suffice to accurately simulate the biological or clinical problem (e.g.
-tumor growth [6]). Yet, as more and more detail about cell shape and bio-mechanical forces is getting required nowadays, the development of more complex models has become timely. 
+tumor growth [refs]). Yet, as more and more detail about cell shape and bio-mechanical forces is getting required nowadays, the development of more complex models has become timely. 
 	      
 <figure>	      
 <img src="pics/DCM_odenthal.jpg" alt="" width="340">      
-<figcaption> <I> Fig.3:  Two different experiments to investigate growing spheroids under pressure. </I>  </figcaption>	
+<figcaption> <I> Fig.3:  Simulation of a cell adhering to a surface. </I>  </figcaption>	
 </figure>	
 	           
 In collaboration with my former collegues in KULeuven, and based on the 3D cell model developed during my KULeuven post-doc work, we further elaborated on a so-called <b>Deformable Cell Model (DCM) </b>.
 Many aspects of the subcellular structure, such a membranes, cytoskeleton, nucleus and organelles can be
-quantified within this framework [3]. This model type therefore allows simulations where cells shape and
-subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM [8].	
+quantified within this framework [refs]. This model type therefore allows simulations where cells shape and
+subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM [refs].	
 	      
-  
-	      
+        
 <p></p>	      
 	      
 <h2>Modeling of red blood cells in Stokes flow</h2>
 
-Smoothed Particle Hydrodynamics (SPH) is a Lagrangian meshfree particle based method to simulate Navier-Stokes dynamics involving free surfaces, large deformations and complex physics.
+<b>Smoothed Particle Hydrodynamics (SPH)</b> is a Lagrangian meshfree particle based method to simulate Navier-Stokes dynamics involving free surfaces, large deformations and complex physics.
 
 However, processes at cellular scale are usually viscosity dominated (overdamped) and hence a Stokes regime can be assumed.
 
@@ -134,7 +131,7 @@ Hereby, the project aimed at providing insights on how two numerical methodologi
 cast into an integrative approach. This work was a scientifically very successful collaboration between the Mebios lab (Faculty of Bio-engineering, KULeuven) and the department of applied mathematics (Faculty of Engineering, KULeuven). The tissue-level is assumed to behave viscoelastic and simulated using nonlinear Finite Element Methods, while the cellular scale is approached by particle based methods and incorporated the subcellular features such as cytoplasm viscosity, cell shape, etc. 
 	      
 	      <figure>	      
-<img src="pics/tissue_impact.jpg" alt="" width="350">      
+<img src="pics/tissue_impact.jpg" alt="" width="450">      
 <figcaption> <I> Fig.5:  Snapshot of simulated 2D cellular structures
 and 3D cell during impact. Each cell is represented by a
 number of particles describing liquid and solid phases. </I>  </figcaption>	
@@ -197,7 +194,7 @@ method to industrial problems. Nowadays, the
 software is used by several companies.
 	      
 	       <figure>	      
-<img src="pics/phd_work.jpg" alt="" width="320">      
+<img src="pics/phd_work.jpg" alt="" width="390">      
 <figcaption> <I> Fig.6: PhD work, involving development of a DEM framework to predict and optimize granular flow in agri-
 cultural processes. </I>  </figcaption>	
 </figure>
