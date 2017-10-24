@@ -39,7 +39,7 @@
 <h2>Modeling and simulation of tissue regeneration using high resolution cell models.</h2>
 
 
-The goal is to get insight in the mechanical stress levels experienced by the hepatocytes during liver tissue regeneration, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [2]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and should become a new standard in agent-based tissue simulations.
+The goal is to get insight in the mechanical stress levels experienced by the hepatocytes during liver <b>tissue regeneration</b>, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [2]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and should become a new standard in agent-based tissue simulations.
 
 <figure>	      
 <img src="pics/lobule_final_DCM.jpg" alt="" width="400">      
@@ -48,9 +48,9 @@ The goal is to get insight in the mechanical stress levels experienced by the he
 	      
 <p></p>
 
-<h2>Modeling stress inhibited cell growth</h2>
+<h2>Modeling of stress inhibited cell growth</h2>
 
-Using agent-based models, I studied  growth dynamics of tumor cells (proliferation, growth, necrosis) under different mechanical pressure conditions. One sperhoid is growing in an elastic capsule, the other one in a Dextran solution (see Fig. 2). This phenomenon is reminiscent to tumor cells experiencing the influence of the surrounding stroma. I have developed an agent-based model that takes into account mechanical stress and cell density, to test hypotheses concerning cell growth under stress conditions. The basic model consists of cells represented by homogeneous adhesive and compressible spheres. In this work, it was demonstrated that the cellular growth response on external mechanical stress may be surprisingly quantitatively predictable, independently of the environmental conditions (work under review). 
+This phenomenon is reminiscent to tumor cells experiencing the influence of the surrounding stroma. Using agent-based models, I studied growth dynamics of tumor cells (proliferation, growth, necrosis) under different mechanical pressure conditions. One sperhoid is growing in an elastic capsule, the other one in a Dextran solution (see Fig. 2). The model consists of a hybrid approach between cells represented by homogeneous adhesive and compressible spheres and a Deformable Cell Model (DCM). To simulate hypotheses concerning cell growth under pressure conditions, the model quantitatively takes into account the applied mechanical stress, cell density, and growth rate. In this work, it was demonstrated that the cellular growth response on external mechanical stress may be surprisingly quantitatively predictable, independently of the environmental conditions (work under review). 
 
 <figure>	      
 <img src="pics/overview.jpg" alt="" width="200">      
@@ -128,10 +128,8 @@ encompassed a 3D realistic egg shell geometry with inside a distinct egg yolk an
 	      
 <p></p>
 	      
-<h2>Multiscale modeling of cellular mechanics in tissue.</h2>
-	      
-	      
-	      
+<h2>Modeling of impact of cellular tissues and multi-scale modeling of cellular mechanics in tissues.</h2>
+	     	      	      
 During my late PhD and early post-doc years, I gained interest in simulation of living matter, i.e cells and
 tissue [10]. I became involved in a multiscale project and collaboration between two KUL reseach groups.
 The goal in this project was to understand how cellular tissue responds to dynamic mechanical load.
@@ -140,10 +138,14 @@ Hereby, the project aimed at providing insights on how two numerical methodologi
 cast into an integrative approach. This work was a scientifically very successful collaboration between the Mebios lab (Faculty of Bio-engineering, KULeuven) and the department of applied math-
 ematics (Faculty of Engineering, KULeuven). The tissue-level is assumed to behave viscoelastic and
 
-simulated using nonlinear Finite Element Methods, while the cellular scale is approached by particle based methods and incorporated the subcellular features such as cytoplasm viscosity, cell shape,
-
-etc. (see Fig. 9).
-
+simulated using nonlinear Finite Element Methods, while the cellular scale is approached by particle based methods and incorporated the subcellular features such as cytoplasm viscosity, cell shape, etc. 
+	      
+	      <figure>	      
+<img src="pics/tissue_impact.jpg" alt="" width="320">      
+<figcaption> <I> Fig.5:  Snapshot of simulated 2D cellular structures
+and 3D cell during impact. Each cell is represented by a
+number of particles describing liquid and solid phases. </I>  </figcaption>	
+</figure>
 
 
 The coupling between the two scales was achieved using computational homogenization techniques and Representative Volume Elements (RVEs). This
