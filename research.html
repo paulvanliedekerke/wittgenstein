@@ -44,25 +44,34 @@ by a number of nodes which are connected by viscoelastic elements interacting vi
 
 <figure>	      
 <img src="pics/lobule_final_DCM.jpg" alt="" width="400">      
-<figcaption>Légende associée</figcaption>	
+<figcaption> High resolution cell model used in a simulation of hepatocyte regeneration in a liver lobule. The cells grow through the network of blood vessels (depicted in gray) from the portal vein area towards the central vein</figcaption>	
 </figure>	      
 	      
 <p></p>
 
 <h2>Modeling stress inhibited cell growth</h2>
 
-Here, I studied  growth dynamics of tumor cells (proliferation, growth, necrosis) under different mechanical pressure conditions  (see two experiments in  Fig. 3 ). This phenomenon is reminiscent to tumor cells experiencing the influence of the surrounding stroma. I have developed an agent-based model that takes into account mechanical stress and cell density, to test hypotheses concerning cell growth under stress conditions. The basic model consists of cells represented by homogeneous adhesive and compressible spheres. In this work, it was demonstrated that the cellular growth response on external mechanical stress may be surprisingly quantitatively predictable, independently of the environmental conditions (submitted recently [9]). 
+Here, I studied  growth dynamics of tumor cells (proliferation, growth, necrosis) under different mechanical pressure conditions. One sperhoid is growing in an elastic capsule, the other one in a Dextran solution (see Fig.). This phenomenon is reminiscent to tumor cells experiencing the influence of the surrounding stroma. I have developed an agent-based model that takes into account mechanical stress and cell density, to test hypotheses concerning cell growth under stress conditions. The basic model consists of cells represented by homogeneous adhesive and compressible spheres. In this work, it was demonstrated that the cellular growth response on external mechanical stress may be surprisingly quantitatively predictable, independently of the environmental conditions (work under review). 
 
+<figure>	      
+<img src="pics/overview.jpg" alt="" width="400">      
+<figcaption> Two different experiments to investigate growing spheroids under pressure. </figcaption>	
+</figure>
+	      
+	      
+	      
 <p></p>
 <h2>Modeling of cell-ECM interactions </h2>
 
-The influence of mechanical feedback loop between cells and Extra-Cellular Matrix (ECM) is poorly understood.  In collaboration with Dr. Margriet Palm (U. of Leiden) I have created a model for cells to migrate through ECM, whereby the ECM is explicitly represented (see Fig. 4). The cells can change shape (form spheres to cylindrical like shape) and have anchoring points (filopodia) that are connected to the ECM. The ECM is modeled by a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells can move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. This work is currently 
-ongoing.
+The influence of mechanical feedback loop between cells and Extra-Cellular Matrix (ECM) is poorly understood.  In collaboration with Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells and explicit representation of ECM. The cells have anchoring points (filopodia) that are connected to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [3].
+	      
+	      
+	     	      
 
 <p></p>
 <h1>Past  <small> (before 2013) </small>  </h1> 
 	      
-<h2>Development of ”Deformable Cell Model“: modeling of arbitrary shaped cells with high
+<h2>Development of high resolution ”Deformable Cell Model“: modeling of arbitrary shaped cells with high
 detail</h2>
 
 The majority of agent based models in the past were build on the
@@ -86,7 +95,13 @@ veloped contact adhesion model is a discretization of a well known continuum the
 
 The model gives very good results with respect to experiments and lead to several new insights [7]. The
 principals of this contact model can also be further exploited to study contact mechanics of irregularly
-shaped rigid bodies in DEM [8].	      
+shaped rigid bodies in DEM [8].	
+	      
+<figure>	      
+<img src="DCM_odenthal/overview.jpg" alt="" width="400">      
+<figcaption> Two different experiments to investigate growing spheroids under pressure. </figcaption>	
+</figure>
+	      
 	      
 <p></p>	      
 	      
