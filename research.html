@@ -39,7 +39,7 @@
 <h2>Modeling and simulation of tissue regeneration using high resolution cell models.</h2>
 
 
-We want to get insight in the mechanical stress levels experienced by the hepatocytes during liver <b> tissue regeneration </b>, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 1, 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [refs]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and should become a new standard in agent-based tissue simulations.
+We want to get insight in the mechanical stress levels experienced by the hepatocytes during liver <b> tissue regeneration </b>, and clarify the relation with tissue architecture. I am elaborating on a previously introduced high resolution Deformable Cell Model in 3D  (see Fig. 1, 3) that is capable of accurately representing cell shape and integrating information at subcellular scales [1]. In a basic DCM the cell surface is discretized by a number of nodes which are connected by viscoelastic elements interacting via pairwise potential functions, creating a flexible scaffolding structure with arbitrary degrees of freedom per cell. I have extended the model with the capability for the cells to grow and divide. This model includes realistic internal mechanics, contact/adhesion mechanics, growth and division, and could become a new standard in agent-based tissue simulations.
 
 <figure>	      
 <img src="pics/lobule_final_DCM.jpg" alt="" width="430">      
@@ -62,7 +62,7 @@ This work aims to clarify the bio-mechanical effects of growing tumor cells in c
 <p></p>
 <h2>Modeling of cell-ECM interactions </h2>
 
-The influence of mechanical feedback loop between cells and <b> Extra-Cellular Matrix (ECM) </b> is poorly understood.  In collaboration with Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells with explicit representation of ECM material. The cells have anchoring points (filopodia) that are connected to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [3].
+The influence of mechanical feedback loop between cells and <b> Extra-Cellular Matrix (ECM) </b> is poorly understood.  In collaboration with Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells with explicit representation of ECM material. The cells have anchoring points (filopodia) that are connected to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [2].
 	      
 	      
 <p></p>	 
@@ -77,21 +77,17 @@ The influence of mechanical feedback loop between cells and <b> Extra-Cellular M
 <h2>Development of high resolution ”Deformable Cell Model“: modeling of arbitrary shaped cells with high
 detail</h2>
 	     	   
-The majority of agent based models in the past were build on the
-assumption of a rigid shaped cells (so-called center based models:
-e.g. spheres, ellipsoids). In a some problems, such simplifications
-suffice to accurately simulate the biological or clinical problem (e.g.
-tumor growth [refs]). Yet, as more and more detail about cell shape and bio-mechanical forces is getting required nowadays, the development of more complex models has become timely. 
+The majority of agent based models in the past were build on the assumption of a rigid shaped cells (so-called center based models: e.g. spheres, ellipsoids). In a some problems, such simplifications suffice to accurately simulate the biological or clinical problem (e.g. tumor growth). Yet, as more and more detail about cell shape and bio-mechanical forces is getting required nowadays, the development of more complex models has become timely. 
 	      
 <figure>	      
 <img src="pics/DCM_odenthal.jpg" alt="" width="340">      
-<figcaption> <I> Fig.3:  Simulation of a cell adhering to a surface. </I>  </figcaption>	
+<figcaption> <I> Fig.3:  Simulation of a cell adhering to a surface (image from [1]). </I>  </figcaption>	
 </figure>	
 	           
 In collaboration with my former collegues in KULeuven, and based on the 3D cell model developed during my KULeuven post-doc work, we further elaborated on a so-called <b>Deformable Cell Model (DCM) </b>.
 Many aspects of the subcellular structure, such a membranes, cytoskeleton, nucleus and organelles can be
-quantified within this framework [refs]. This model type therefore allows simulations where cells shape and
-subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM [refs].	
+quantified within this framework. This model type therefore allows simulations where cells shape and
+subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights [1]. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM.	
 	      
         
 <p></p>	      
@@ -102,7 +98,7 @@ subcellular detail are important variables (but is more limited in cell numbers 
 
 However, processes at cellular scale are usually viscosity dominated (overdamped) and hence a Stokes regime can be assumed.
 
-I developed an SPH solver for fluid flows in Stokes regime. The method (called NSPH) is based on the standard SPH technique but reduces it to a first order system and involves a different numerical solving scheme [9]. Thanks to this, longer timescales can be simulated, typically needed in cellular processes. I applied this
+I developed an SPH solver for fluid flows in Stokes regime. The method (called NSPH) is based on the standard SPH technique but reduces it to a first order system and involves a different numerical solving scheme [3]. Thanks to this, longer timescales can be simulated, typically needed in cellular processes. I applied this
 method to the dynamics of a red blood cell passing a through a
 narrow channel (capillary). The blood plasma was modeled by
 NSPH, while the red blood cell was represented by a connection of
@@ -124,7 +120,7 @@ Particle Hydrodynamics model for simulating viscoelastic fluids (Maxwell model) 
 	      
 <p></p>
 	      
-<h2>Modeling of impact of cellular tissues and multi-scale modeling of cellular mechanics in tissues.</h2>
+<h2>Modeling of impact of cellular tissues and multi-scale modeling of cellular mechanics in visco-elastic tissues.</h2>
 	     	      	      
 During my late PhD and early post-doc years, I gained interest in simulation of living matter, i.e cells and
 tissue. I became involved in a multiscale project and collaboration between two KUL reseach groups. The goal in this project was to understand how cellular tissue responds to (dynamic) mechanical load.
@@ -140,19 +136,16 @@ number of particles describing liquid and solid phases. </I>  </figcaption>
 </figure>
 
 
-The coupling between the two scales was achieved using computational homogenization techniques and Representative Volume Elements (RVEs). The microscale model involves a physical representation of cells and their parts (membranes, cytoplasm, nucleus, ..). The cells interact with each other by adhesive forces. Small groups of cells form a aggregate that represents a
-small but repetitive part of the tissue. The model is able to simulate large deformations and even breakage of cells under impact load (see Fig. 5) [refs].
-This project resulted in a working code that uses microscopic physical properties of cells (e.g. cytoplasm
+The coupling between the two scales was achieved using computational homogenization techniques and Representative Volume Elements (RVEs) [5,6]. The microscale model involves a physical representation of cells and their parts (membranes, cytoplasm, nucleus, ..). The cells interact with each other by adhesive forces. Small groups of cells form a aggregate that represents a
+small but repetitive part of the tissue. The model is able to simulate large deformations and even breakage of cells under impact load (see Fig. 5) [4]. This project resulted in a working code that uses microscopic physical properties of cells (e.g. cytoplasm
 viscosity, cell wall Young modulus, cellular structure) and predicts the overall constitutive behavior of
-the resulting tissue within a feasible computation time [refs]. This work greatly contributed to my
+the resulting tissue within a feasible computation time [6]. This work greatly contributed to my
 understanding of multiscale methods. Several innovative contributions to the field in order to accomplish
 the mission of this project had to be introduced:
+	      
 + Construction and implementation of a detail mechanical model of a biological cell with flexibility
 towards physical features and high accuracy.
-+ Introduction of viscous inter-particle forces posed challenging problems with regard to the standard
-
-computational homogenization strategies. However, we successfully developed a technique to incor-
-porate these effects in the boundary value problem for the Representative Volume Element.
++ Introduction of viscous inter-particle forces posed challenging problems with regard to the standard computational homogenization strategies. However, we successfully developed a technique to incorporate these effects in the boundary value problem for the Representative Volume Element.
 	      
 <p></p>	      
 	      
@@ -199,10 +192,10 @@ The goal of my PhD thesis was to build a numeri-
 cal model to simulate and quantify granular flow
 
 and the spread of grain particles in a spinning disc fertilizer spreader, and thus to increase the optimiza-
-tion of the performance of agricultural machines (see Fig. 6. During the first years (2001-2005), I mainly
+tion of the performance of agricultural machines (see Fig. 6). During the first years (2001-2005), I mainly
 developed the model and code for interacting grains including spherical and non-spherical shapes, and the
 interaction with rotating machine parts. In order to validate the models and calibrate model parameters,
-I built several experiments setups [refs]. From the insight obtained with simulations, we developed a working code that predicts fertilizer particle spreading on a field with a reasonable accuracy. The project was a successful collaboration with the
+I built several experiments setups (e.g. [7]). From the insight obtained with simulations, we developed a working code that predicts fertilizer particle spreading on a field with a reasonable accuracy. The project was a successful collaboration with the
 Institut national de recherche en sciences et technologies pour l’environnement et l’agriculture (IRSTEA,
 Montoldre, France), the Institute for Agricultural and Fisheries Research in Belgium (ILVO), and several
 industrial partners. In the period 2006-2007, I also advised the company BASF in developing a prototype
