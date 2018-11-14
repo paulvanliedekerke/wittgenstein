@@ -53,7 +53,8 @@ We want to get insight in the mechanical stress levels experienced by the hepato
 <img src="pics/Fig1.jpg" alt="" width="430">      
 <figcaption> <I>Fig.1: High resolution cell model. </I> </figcaption>	
 </figure>
-	      
+	
+<p></p>
 	      
 <figure>	      
 <img src="pics/lobule_final_DCM.jpg" alt="" width="430">      
@@ -76,7 +77,7 @@ This work aims to clarify the bio-mechanical effects of growing tumor cells in c
 <p></p>
 <h2>Modeling of cell-ECM interactions </h2>
 
-The influence of mechanical feedback loop between cells and <b> Extra-Cellular Matrix (ECM) </b>, the medium in which cells anchor,  is poorly understood.  In collaboration with Dr. Andreas Buttenschoen (University of British Colombia), Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells embedded in ECM material. The cells have anchoring points (filopodia)  to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [2].
+The influence of mechanical feedback loop between cells and <b> Extra-Cellular Matrix (ECM) </b>, the medium in which cells anchor,  is poorly understood.  In collaboration with Dr. Andreas Buttenschoen (University of British Colombia), Dr. Margriet Palm (U. of Leiden) and Tommy Heck (KULeuven) we are creating models for cells embedded in ECM material. The cells have anchoring points (filopodia)  to the ECM. The ECM is either modeled by a continuum material or a discrete network of viscoelastic elements. By a sequence of pulling and retracting the anchors, the cells move through the ECM. As such we can quantify both the stresses that work on the cells and the ECM. Part of this work is published in [4].
 	      
 	      
 <p></p>	 
@@ -97,13 +98,13 @@ The majority of agent based models in the past were build on the assumption of a
 	      
 <figure>	      
 <img src="pics/DCM_odenthal.jpg" alt="" width="340">      
-<figcaption> <I> Fig.3:  Simulation of a cell adhering to a surface (image from [1]). </I>  </figcaption>	
+<figcaption> <I> Fig.3:  Simulation of a cell adhering to a surface (image from [3]). </I>  </figcaption>	
 </figure>	
 	           
 In collaboration with my former collegues in KULeuven, and based on the 3D cell model developed during my KULeuven post-doc work, we further elaborated on a so-called <b>Deformable Cell Model (DCM) </b>.
 Many aspects of the subcellular structure, such a membranes, cytoskeleton, nucleus and organelles can be
 quantified within this framework. This model type therefore allows simulations where cells shape and
-subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights [1]. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM.	
+subcellular detail are important variables (but is more limited in cell numbers as compared to center based models). In this particular research, we studied the adhesion dynamics of cells to a surface. The developed contact adhesion model is a discretization of a well known continuum theory (Maugis-Dugdale). The model gives very good results with respect to experiments and lead to several new insights [3]. The principals of this contact model can also be further exploited to study contact mechanics of irregularly shaped rigid bodies in DEM.	
 	      
         
 <p></p>	      
@@ -114,7 +115,7 @@ subcellular detail are important variables (but is more limited in cell numbers 
 
 However, processes at cellular scale are usually viscosity dominated (overdamped) and hence a Stokes regime can be assumed.
 
-We developed an SPH solver for fluids in Stokes regime. The method (called NSPH) is based on the standard SPH technique but reduces it to a first order system and involves a different numerical solving scheme [3]. Thanks to this, longer timescales can be simulated, typically needed in cellular processes. I applied this
+We developed an SPH solver for fluids in Stokes regime. The method (called NSPH) is based on the standard SPH technique but reduces it to a first order system and involves a different numerical solving scheme [5]. Thanks to this, longer timescales can be simulated, typically needed in cellular processes. I applied this
 method to the dynamics of a red blood cell passing a through a
 narrow channel (capillary). The blood plasma was modeled by
 NSPH, while the red blood cell was represented by a connection of
@@ -151,12 +152,10 @@ number of particles describing liquid and solid phases. </I>  </figcaption>
 </figure>
 
 
-The coupling between the two scales was achieved using computational homogenization techniques and Representative Volume Elements (RVEs) [5,6]. The microscale model involves a physical representation of cells and their parts (membranes, cytoplasm, nucleus, ..). The cells interact with each other by adhesive forces. Small groups of cells form a aggregate that represents a
-small but repetitive part of the tissue. The model is able to simulate large deformations and even breakage of cells under impact load (see Fig. 5) [4]. This project resulted in a working code that uses microscopic physical properties of cells (e.g. cytoplasm
+The coupling between the two scales was achieved using computational homogenization techniques and Representative Volume Elements (RVEs) [7,8]. The microscale model involves a physical representation of cells and their parts (membranes, cytoplasm, nucleus, ..). The cells interact with each other by adhesive forces. Small groups of cells form a aggregate that represents a
+small but repetitive part of the tissue. The model is able to simulate large deformations and even breakage of cells under impact load (see Fig. 5) [6]. This project resulted in a working code that uses microscopic physical properties of cells (e.g. cytoplasm
 viscosity, cell wall Young modulus, cellular structure) and predicts the overall constitutive behavior of
-the resulting tissue within a feasible computation time [6]. This work greatly contributed to my
-understanding of multiscale methods. Several innovative contributions to the field in order to accomplish
-the mission of this project had to be introduced:
+the resulting tissue within a feasible computation time [6].  Several innovative contributions to the field in order to accomplish the mission of this project had to be introduced:
 	      
 + Construction and implementation of a detail mechanical model of a biological cell with flexibility
 towards physical features and high accuracy.
@@ -210,7 +209,7 @@ and the spread of grain particles in a spinning disc fertilizer spreader, and th
 tion of the performance of agricultural machines (see Fig. 6). During the first years (2001-2005), I mainly
 developed the model and code for interacting grains including spherical and non-spherical shapes, and the
 interaction with rotating machine parts. In order to validate the models and calibrate model parameters,
-I built several experiments setups (e.g. [7]). From the insight obtained with simulations, we developed a working code that predicts fertilizer particle spreading on a field with a reasonable accuracy. The project was a successful collaboration with the
+I built several experiments setups (e.g. [9]). From the insight obtained with simulations, we developed a working code that predicts fertilizer particle spreading on a field with a reasonable accuracy. The project was a successful collaboration with the
 Institut national de recherche en sciences et technologies pour l’environnement et l’agriculture (IRSTEA,
 Montoldre, France), the Institute for Agricultural and Fisheries Research in Belgium (ILVO), and several
 industrial partners. In the period 2006-2007, I also advised the company BASF in developing a prototype
@@ -221,17 +220,21 @@ year bilateral project.
 	      
 <h1>References </h1>
 	      
-1. T. Odenthal, B. Smeets, <b>Van Liedekerke P.</b>, E. Tijskens, H. Ramon, H. Van Oosterwijck (2013) Contact mechanics of adhesive triangulated bodies and application to a deformable cell model.<I> Plos Comp. Biol9(10).</I>  <br>
-2. T. Heck, S. Vanmaercke, P. Bhattacharya, T. Odenthal, H. Ramon, H Van Oosterwijck and <b>Van
+1. <b>Van Liedekerke P.</b>, J. Neitsch, T. Johann, E. Warnt, S. Hoehme, S. Grosser, J. Kaes and D. Drasdo (2017) Quantifying the mechanics and growth of cells and tissues in 3D using high resolution computational models (submitted). <br>	      
+2.Van Liedekerke P.</b>, J. Neitsch, T. Johann, K. Alessandri, P. Nassoy and D. Drasdo (2017) Quantitative
+modeling identifies robust predictable stress response of growing CT-26 tumor spheroids under variable        
+conditions (Plos comp. Biol, accepted). <br>	      
+3. T. Odenthal, B. Smeets, <b>Van Liedekerke P.</b>, E. Tijskens, H. Ramon, H. Van Oosterwijck (2013) Contact mechanics of adhesive triangulated bodies and application to a deformable cell model.<I> Plos Comp. Biol9(10).</I>  <br>
+4. T. Heck, S. Vanmaercke, P. Bhattacharya, T. Odenthal, H. Ramon, H Van Oosterwijck and <b>Van
 Liedekerke P.</b> (2017) Modeling ExtraCellular matrix viscoelasticity using non-inertial Smoothed Particle
 Hydrodynamics. <I>Comp. Meth. Appl. Mech. Eng. 322(1). </I><br>
-3. <b>Van Liedekerke P.</b>, T. Odenthal, B. Smeets, H. Ramon (2013) Solving microscopic flow problems using Stokes equations in SPH. <I>Computer Physics Communications 184(7).</I> <br>
-4. <b>Van Liedekerke P.</b>, Ghysels P., Tijskens E., Samaey G., Roose D. and Ramon H. (2011) The bruising of soft cellular tissue: a particle base simulation approach. <I>Soft Matter 7, DOI:10.1039/C0SM01261K.</I>  <br>
-5. Ghysels P., Samaey G., Tijskens B., <b>Van Liedekerke P.</b>, Ramon H. and Roose D. (2009) Multi-scale
+5. <b>Van Liedekerke P.</b>, T. Odenthal, B. Smeets, H. Ramon (2013) Solving microscopic flow problems using Stokes equations in SPH. <I>Computer Physics Communications 184(7).</I> <br>
+6. <b>Van Liedekerke P.</b>, Ghysels P., Tijskens E., Samaey G., Roose D. and Ramon H. (2011) The bruising of soft cellular tissue: a particle base simulation approach. <I>Soft Matter 7, DOI:10.1039/C0SM01261K.</I>  <br>
+7. Ghysels P., Samaey G., Tijskens B., <b>Van Liedekerke P.</b>, Ramon H. and Roose D. (2009) Multi-scale
 simulation of plant tissue deformation using a model for individual cell mechanics. <I>Phys. Biol. 6(3).</I><br>
-6. Ghysels P., Samaey G., <b>Van Liedekerke P.</b>, Tijskens E., Ramon H. and Roose D. (2010) Multi-scale
+8. Ghysels P., Samaey G., <b>Van Liedekerke P.</b>, Tijskens E., Ramon H. and Roose D. (2010) Multi-scale
 modeling of viscoelastic plant tissue.<I> Int. J. Multiscale Com. Eng. 8(4).</I><br>
-7. <b>Van Liedekerke P.</b>, Tijskens E., Dintwa E.,F. Rioual, J. Vangeyte and Ramon H. (2008) DEM simulations
+9. <b>Van Liedekerke P.</b>, Tijskens E., Dintwa E.,F. Rioual, J. Vangeyte and Ramon H. (2008) DEM simulations
 of the particle flow on a centrifugal fertilizer spreader.<I> Powder Technology 190(3), 348-360.</I><br>
 	      
 
